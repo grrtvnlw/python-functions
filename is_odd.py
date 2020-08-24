@@ -5,10 +5,7 @@ def is_even(num):
     return False
 
 def is_odd(num):
-  if not is_even(num):
-    return True
-  else:
-    return False
+  return not is_even(num)
 
 print(is_odd(2))
 print(is_odd(3))

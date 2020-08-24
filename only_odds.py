@@ -5,10 +5,7 @@ def is_even(num):
     return False
 
 def is_odd(num):
-  if not is_even(num):
-    return True
-  else:
-    return False
+  return not is_even(num)
 
 def only_odds(lst):
   new_lst = []
