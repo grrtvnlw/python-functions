@@ -52,28 +52,29 @@ def bills(total):
 def change(total):
 
   if total > .25:
-    quarters = total / .25
-    print(quarters)
+    quarters = int(total / .25)
     total -= (quarters * .25)
   else:
     quarters = 0
   
   if total > .10:
-    dimes = total / .10
+    dimes = int(total / .10)
     total -= (dimes * .10)
   else:
     dimes = 0
   
   if total > .05:
-    nickels = total / .05
+    nickels = int(total / .05)
     total -= (nickels * .05)
   else:
     nickels = 0
   
   if total > .01:
-    pennies = total / .01
+    pennies = round(total / .01)
     total -= (pennies * .01)
   else:
     pennies = 0
+
+  return (pennies, nickels, dimes, quarters)
 
 print(make_change(433.59, 300.59))
